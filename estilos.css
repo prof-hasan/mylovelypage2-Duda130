@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #F9FAFB; 
+    color: #111827; 
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+    background: #EEF2FF; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+header .logo-img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+header .logo {
+    font-family: 'Pacifico', cursive;
+    color: #6366F1;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #4F46E5;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    background-color: #6366F1;
+    color: #FFFFFF;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+main img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+section {
+    padding: 30px 20px;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+section h2 {
+    font-family: 'Pacifico', cursive;
+    color: #6366F1;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section p, section li, section dd {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #1F2937;
+}
+
+ul, dl {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+dl dt {
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+dl dd {
+    margin-left: 20px;
+}
+
+.video-button a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #4F46E5;
+    color: #FFFFFF;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.video-button a:hover {
+    background-color: #2563EB;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #E5E7EB;
+    text-align: left;
+}
+
+table th {
+    background-color: #EEF2FF;
+    color: #1F2937;
+}
+
+table tr:hover {
+    background-color: #C7D2FE; 
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #EEF2FF;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+    color: #1F2937;
+    font-size: 0.9rem;
+}
+
+.cards-meditacao {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 250px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    cursor: pointer;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    padding: 10px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-text {
+    transform: translateY(0);
+}
+
+.beneficios {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.beneficios img {
+    width: 200px;
+    border-radius: 12px;
+}
+
+/*============== Parte do jogo =================*/
+.jogo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    text-align: center;
+}
+
+.jogo-container .jogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#planta-jogo {
+    width: 200px;
+    max-width: 80vw;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+#regar-btn {
+    padding: 18px 35px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #0ecfdd;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#regar-btn:hover {
+    background-color: #6366F1;
+    transform: scale(1.05);
+}
+
+.jogo-container h2 {
+    color: #40c4db; 
+}
+
+/* ==================== EASTER EGG ===================== */
+.jogo-easter {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: green;
+}
+
+
+
